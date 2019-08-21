@@ -1,0 +1,66 @@
+---
+title: "vinicius-santana-ad-ufpe-2019"
+author: "Vinicius Silva Santana"
+date: "18/07/2019"
+output: pdf_document
+---
+
+#**SUMMARY**#
+
+Add summary here
+
+#**1. INTRODUCTION**#
+
+Add introduction here
+
+#**2. INTERNATIONAL AID, POVERTY AND DEVELOPMENT: A NOT SELF-EVIDENT RELATION**#
+
+Add short introduction to literature review here
+
+#2.1. THE RELATIONSHIP BETWEEN AID AND POVERTY#
+Add (Hanlon, Barrientos and Hulme; Riddel) - does foreign aid really work? the relationship between aid and poverty reduction
+
+#2.2. AID AND ECONOMIC DEVELOPMENT#
+Add (Wallerstein)
+
+The different types of aid and the most institutionalized one: aid for development
+
+#2.3. WHY DO REGIONS MATTER?#
+Add
+
+#**3. THEORY**#
+
+Add text and change head
+
+#**4. THE DATA**#
+
+In order to allow the correct assessment of the inferences herein presented, the data had to be collected from different data sets and to be adapted in order to suit the needs for statistical analysis. Adaptations were made on the countries that belonged to each of the basin regions, countries in the African continent that had drainage basins in more than one of the rivers added.
+
+(How did I choose the countries)
+The countries included to the Amazon Basin are Bolivia, Brazil, Colombia, Ecuador, Guyana, Peru, Suriname, and Venezuela. For the Bay of Bengal, Bangladesh, India, Indonesia, Myanmar and Sri Lanka. For the Caspian Sea, not only did the countries on the basin compose the list, but also countries in the Caspian Sea drainage area. The countries on the basin are Azerbaijan, Iran, Kazakhstan and Turkmenistan. Russia is also on the shore of the Caspian Sea, but the Quality of the Government dataset does not include aid data for Russia and other considered developed countries. Therefore, Russia is not included in the Caspian Sea region. The Caspian drainage area plays a significant role in geopolitics and the relations between the countires XXX. Therefore, Armenia, Georgia, Turkey and Uzbekistan were included in the region set. 
+Add Congo Basin
+Add Nile Basin (Discuss the countries that "belong to both basins and the reasons why they were put where they were put)
+Add Niger Basin (also the argument for the neighboring countries not being included)
+
+
+For some countries, data were scarce, that was mostly true in some of the countries of the Caspian Sea, such as Azerbaijan and Turkmenistan; countries in the African continent like Gabon and Sudan; and countries of the Bay of Bengal, more specifically, Myanmar and Indonesia. For each of the cases, a year different than 2012 was used to assess poverty rate.
+
+The data for the poverty rates were extracted from the PovcalNet platform of the World Bank.
+
+The aid data was taken from the QOG data set and mirror the value of aid as a sum of the aid from diverse donors and the aid from international organizations. To allow the correct effect between economic growth, GDP size and poverty rate on the volume of aid received by a country, the data extracted from QOG is of one year after the data extracted from the PovcalNet platform and from the World Bank main dataset.
+
+Wrap-up 
+
+#**5. AN INTERESTING OUTCOME OR MORE LIKE WE KNEW IT BEFORE?**#
+
+Data analysis
+
+COMMENT: Plot graphs to argue that according to the data, the size of GDP is more striking to the amount of aid a country might receive in a given year than is the poverty rate. In fact, a higher poverty rate tends to reduce the average amount of aid received.
+
+#**6. CONCLUDING THOUGHTS**#
+
+Add concluding thoughts here
+
+#**7. BIBLIOGRAPHY**#
+
+Add bibliography here (or in another source)
