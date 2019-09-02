@@ -2,65 +2,296 @@
 title: "vinicius-santana-ad-ufpe-2019"
 author: "Vinicius Silva Santana"
 date: "18/07/2019"
-output: pdf_document
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+mainfont: Times New Roman
 ---
+<p style="text-align: center;"> UNIVERSDIDADE FEDERAL DE PERNAMBUCO </p>
+<p style="text-align: center;"> PROGRAMA DE PÓS GRADUAÇÃO EM CIÊNCIA POLÍTICA </p>
+<p style="text-align: center;"> CCP 1069 - ANÁLISE DE DADOS </p>
+<p style="text-align: center;"> VINÍCIUS SILVA SANTANA </p>
+\
+\
+\
+\
+\
+\
+\
 
-#**SUMMARY**#
+<p style="text-align: center;"> **TITLE OF THE TEXT** </p>
+\
+\
+\
+
+Say something here
+\
+\
+\
+\
+\
+\
+
+<p style="text-align: center;"> September, 2019 </p>
+<p style="text-align: center;"> Recife </p>
+
+```{r include=FALSE}
+library(tidyverse)
+library(rvest)
+library(magrittr)
+library(ggmap)
+library(stringr)
+library(ggplot2)
+library(modelr)
+
+# retrieving map
+map.world <- map_data("world")
+
+# retrive dataset
+pov.aid <- read.csv("./vinicius-santana-ad-ufpe-2019.csv")
+```
+
+\newpage
+#<center>**SUMMARY**<center>#
 
 Add summary here
+
+\newpage
+
+#<center>**ABSTRACT**<center>#
+
+Add abstract here
+
+\newpage
+
+#<center>**RESUMO**<center>#
+
+Add resumo em portugues
 
 #**1. INTRODUCTION**#
 
 Add introduction here
 
+
 #**2. INTERNATIONAL AID, POVERTY AND DEVELOPMENT: A NOT SELF-EVIDENT RELATION**#
 
-Add short introduction to literature review here
+In the discussions in political science and international relations literature, it is often implied that international aid - frequently also called foreign aid - aims to promote economic development and reduce poverty. It is no novelty, however, that there is more to international aid than only this rather broad objective.
 
-#2.1. THE RELATIONSHIP BETWEEN AID AND POVERTY#
-Add (Hanlon, Barrientos and Hulme; Riddel) - does foreign aid really work? the relationship between aid and poverty reduction
+International aid is placed within the international cooperation context. Interpretations on the genesis of international cooperation set up different starting points to it. They usually span from Mario Dehove's (1998) interpretation that since the very foundation of the Westphalian state, the basis for the development of this form of cooperation was laid to post war theorists claiming that the unfolding of international cooperation came to light with the creation and establishment of the Bretton Woods organizations. Therebetween, XXX Murphy (2014) argues that European consertation prior to World War I, supported by international public unions, was international cooperation's first milestone; while XXX Tavares and XXX Belluzzo (2004) see the formation of the _Pax Brittanica_ as its onset (SANTANA, 2017). Whichever is the case, according to Carol Lancaster (2007), international aid as we know it today was rather a puzzling topic before the end of World War II whose main transactions were addressed to humanitarian programs. 
 
-#2.2. AID AND ECONOMIC DEVELOPMENT#
+According to well-known international relations theorist Immanuel Wallerstein (ANO), international aid may have At the same time, the relations between poverty and economic development and the relation between international aid and the other two is far from being self-evident (LANCASTER, 2007). 
+
+#2.1. AID AND ECONOMIC DEVELOPMENT#
 Add (Wallerstein)
 
 The different types of aid and the most institutionalized one: aid for development
 
+In his 1962 paper to the American Political Science Review, A Political Theory of Foreign Aid, Hans Morgenthau presents the various shapes international aid can take. He not only describes the different forms of international aid, but also analyses them within the context of development policy. According to him, aid for humanitarian purposes, aid for subsistence, bribery, aid for prestige and aid for development are the different forms international aid takes. In his interpretation, however, international aid for development is not only institutionalized nowadays, but is also expected to happen, by both donor and recipient governments. It not only makes transfers viable and rationalized and legitimates the notion that the rich countries must take responsibility on helping the poor ones, but also promotes so-called middle income countries like Thailand and Turkey and low-income countries like China, Azerbaijan and India to engage in a dual give-and-take role in the international aid logics (LANCASTER, 2007; SANTANA, 2017). That is, middle and low income nations usually receive aid from richer countries while develop programs to other poor countries.
+
+If Lancaster (2007) is correct in saying that only after the 1950s international aid started to be widespread and institutionalized, then, Truman's Point Four Program was its kick-off. In short, Truman's Point Four Program proposed technical assistance to developing countries and set the United States as a model of development in a Cold War context, where both the Soviet Union and the U.S. were  
+Aid to western Europe (especially for military purposes). According to XXX Rist (2002), Truman's Point Four put American scientific knowledge and industrial progress in disposition to underdeveloped regions so that they could improve their economic development because their poverty was an obstacle and a threat to both themselves and the developed nations. It also evoked other developed nations to promoted development, as it did to private capital and large enterprises. Providing aid to poorer nations was a way to ensure that not only the threat of communism would be dispelled, but that American cultural system and economic practices would be exported to the rest of the world.
+
+Morgenthau (1962) argues that, due to a rather traditional belief in academia, technical knowledge and the formation of capital are interpreted as the main tools for the economic development of poorer nations - and, at the same time, to the reduction of poverty. Although Morgenthau wrote his argument in the 1960s and the main theoretical approaches to poverty and development have changed over the decades, Lancaster (2007) shows that many studies on international relations either take the relation between the promotion of technical knowledge and the growth of Gross Domestic Product (GDP), and their relation with development to be self-evident. In other words, the main belief within academia is that poorer countries cannot achieve development because they lack know-how and money. It neglects, consequently, many challenges faced by these countires, such as difficulties in access to resources, and social and political burden among other shortages. This thinking found its way with the Industrial Revolution, but seem not to be able to give a solution to inequality.
+
+TALK ABOUT ACCUMULATION? (p 64 to 68 of dissertation)
+
+
+#2.2. THE RELATIONSHIP BETWEEN AID AND POVERTY#
+Add (Hanlon, Barrientos and Hulme; Riddel) - does foreign aid really work? the relationship between aid and poverty reduction
+
+Poverty and development seem not to be separate. For many authors, poverty and development are concepts that are intertwined and the reduction of poverty is therefore tightly associated with the growth of development indexes (HALL, MIGDLEY, 2005). If development and poverty are intertwined, then international aid for development also aims at reducing poverty (LANCASTER, 2007).
+
+Poverty has taken many measurements, 
+
+Poverty reduction became a goal to achieve development.. not as before when development would then tackle poverty.
+
 #2.3. WHY DO REGIONS MATTER?#
 Add
 
+
 #**3. THEORY**#
 
-Add text and change head
+Ao discutir sobre a cooperação internacional para o desenvolvimento e seus êxitos, Morgenthau (1962, p. 307) afirma que
+Its success depends in good measure not so much upon its soundness in strictly economic terms as upon intellectual, moral, and political preconditions, which are not susceptible to economic manipulation, if they are susceptible to manipulation from the outside at all.
+Tal argumento pode ser refutado, atualmente, com os argumentos de Riddell (2008) que diz que o maior problema da cooperação internacional atualmente está no total controle das doações pelos doadores sem que haja liberdade aos beneficiários de fazer o que é melhor com o auxílio disponível. A falta dessa liberdade gera um paradoxo dual onde os doadores clamam a ineficiência do uso da cooperação pelos beneficiários e estes últimos estão sempre a pedir mais acusando os primeiros de mesquinhos.
+A falta de liberdade dos recipientes em Riddell remete ao conceito de apropriação e ao do funcionamento ou não da cooperação internacional e da ajuda externa lido como a eficácia e a eficiência da ajuda. Segundo Kraychete (2012), a forma de cooperar sofreu modificações à medida em que a agenda do desenvolvimento foi sendo redefinida, sendo já em 1996 a busca da eficácia e da eficiência “apontadas como o caminho para recuperar o prestígio da cooperação internacional para o desenvolvimento” (p. 255), ainda que só nos anos 2000 tal abordagem tenha sido de fato institucionalizada pelas organizações internacionais por meio da Conferência Internacional sobre o Financiamento do Desenvolvimento em 2002 em Monterrey, no México, que fora organizada pela Organização das Nações Unidas (ONU).
+Subsequentes à Conferência de Monterrey, os Fóruns de Alto Nível da ONU resultaram na Declaração de Roma sobre a Harmonização (2003), na Declaração de Paris sobre a Eficácia da Ajuda (2005), na Agenda de Ação de Accra (2008) e na Declaração de Busan (2011). Em suma, todos os documentos gerados por estes fóruns de alto nível visavam a harmonização das diversas políticas na busca da eficiência e eficácia dos projetos e na própria avaliação da cooperação. Para Kraychete (2012, p. 255), as diretrizes decorrentes dos fóruns:
+implicaram em maior poder das organizações internacionais sobre os parceiros nacionais, assim como, a aplicação de metodologias de gestão de projetos tomadas de empréstimo das corporações privadas. Essas mudanças trouxeram implicações na forma de conceber e realizar a cooperação internacional para o desenvolvimento explicitadas a partir das
+226
+redefinições do papel a ser desempenhado pelo Estado, pelo mercado e pela sociedade civil.
+Para além dos diferentes papeis a serem desempenhados pelos diferentes atores, os documentos preveem também o direito à apropriação das políticas de desenvolvimento por parte das nações receptoras de ajuda, enquanto as políticas do Banco Mundial suprimem as relações de trabalho como o principal vetor de minoração da pobreza e fomentam assistência focalizada aos mais pobres entre os pobres, afim de suprir as suas necessidades mais básicas e de investir no capital humano e no empreendedorismo. Junto a isso, as reformas necessárias (fomentadas por meio das condicionalidades da cooperação) além de fomentarem o aumento da eficiência, retiram da responsabilidade do Estado a promoção do desenvolvimento e a passam para os mercados (UNÁ, 2004).
 
 #**4. THE DATA**#
 
-In order to allow the correct assessment of the inferences herein presented, the data had to be collected from different data sets and to be adapted in order to suit the needs for statistical analysis. Adaptations were made on the countries that belonged to each of the basin regions, countries in the African continent that had drainage basins in more than one of the rivers added.
+To analyze poverty and international relations quantitatively proved to be no easy task. Collection of data ^[The aid data collected for this analysis were retrieved from the Quality of Government (QoG) 2019 Time Series Standard dataset. Also from QoG were retrieved data regarding population size. They are available on: https://qog.pol.gu.se/data/datadownloads/qogstandarddata. All data relating to poverty, however, were retrived from World Bank's PovcalNet platform. It is accessible on: http://iresearch.worldbank.org/PovcalNet/povOnDemand.aspx.] and Bla, bla, bla.
 
-(How did I choose the countries)
-The countries included to the Amazon Basin are Bolivia, Brazil, Colombia, Ecuador, Guyana, Peru, Suriname, and Venezuela. For the Bay of Bengal, Bangladesh, India, Indonesia, Myanmar and Sri Lanka. For the Caspian Sea, not only did the countries on the basin compose the list, but also countries in the Caspian Sea drainage area. The countries on the basin are Azerbaijan, Iran, Kazakhstan and Turkmenistan. Russia is also on the shore of the Caspian Sea, but the Quality of the Government dataset does not include aid data for Russia and other considered developed countries. Therefore, Russia is not included in the Caspian Sea region. The Caspian drainage area plays a significant role in geopolitics and the relations between the countires XXX. Therefore, Armenia, Georgia, Turkey and Uzbekistan were included in the region set. 
-Add Congo Basin
-Add Nile Basin (Discuss the countries that "belong to both basins and the reasons why they were put where they were put)
-Add Niger Basin (also the argument for the neighboring countries not being included)
+The final data frame comprised data on GDP size, GDP _per capita_, poverty rate, population, total aid received from both international organizations and nations and XXX from a total of 42 countries from 6 different politically relevant basins around the world. Nummerically, there were eight countries for the Amazon Basin, the Congo Basin and the Caspian Sea drainage area, seven countries for the Nile Basin, six for the Niger Basin and five countries for the Bay of Bengal as it can be seen in the table below.
+```{r echo=FALSE}
+require(ggplot2)
+ggplot(data = pov.aid) +
+  geom_bar(mapping = aes(x = cregion)) + coord_flip() +
+  labs(title = "Number of countries per basin area")
+```
+
+The countries and their respective basin areas are printed in the map below. For the Amazon Basin, the countries are straight forward and did not need any special adaptation. Bolivia, Brazil, Colombia, Ecuador, Peru, Venezuela, Suryname and Guyana are the countries that comprise the list. In the African continent, three different regions are set: the Congo Basin area lists both the Republic and the Democratic Republic of Congo as well as Tanzania, Zambia, Angola, the Central African Republic, Cameroon, and Gaboon. The Nile Basin, in turn, comprises Egypt, Uganda, Ethiopia, Rwanda, Sudan, Burundi, and Kenya. Finally, the Niger basin includes, for this study, Guinea, Benin, Niger, Sierra Leone, Mali and Nigeria. The five Bay of Bengal countries are Bangladesh, India, Indonesia, Myanmar and Sri Lanka. Special note must be given to the Caspian Sea drainage area: not only did the countries directly on the basin compose the list, but also countries in the Caspian Sea drainage area. The countries on the basin are Azerbaijan, Iran, Kazakhstan and Turkmenistan. Russia is also on the shore of the Caspian Sea, but the Quality of the Government dataset does not include aid data for Russia and other considered developed countries. Therefore, Russia is not included in the Caspian Sea region. The Caspian drainage area plays a significant role in geopolitics and the relations between the countires there for its abundance of crude oil and gas. Therefore, Armenia, Georgia, Turkey and Uzbekistan were also included in the region's set.
+
+```{r include=FALSE}
+library(tidyverse)
+library(rvest)
+library(magrittr)
+library(ggmap)
+library(stringr)
+library(ggplot2)
+
+# retrieving map
+map.world <- map_data("world")
+
+# retrive dataset
+pov.aid <- read.csv("./vinicius-santana-ad-ufpe-2019.csv")
+
+# changing country name "Congo, Democratic Republic" to Democratic Republic of Congo in pov.aid
+as.factor(pov.aid$cname) %>% levels()
+
+pov.aid$cname <- recode(pov.aid$cname
+                        ,'Congo, Democratic Republic' = 'Democratic Republic of Congo'
+)
+
+# checking if it is changed
+print(pov.aid$cname)
+
+pov.map <- left_join(map.world, pov.aid, by = c('region' = 'cname'))
+
+head(pov.map)
+
+# filling flag
+pov.map.flag <- pov.map %>% mutate(fill_flg = ifelse(is.na(cregion),F,T))
+head(pov.map.flag)
+```
 
 
-For some countries, data were scarce, that was mostly true in some of the countries of the Caspian Sea, such as Azerbaijan and Turkmenistan; countries in the African continent like Gabon and Sudan; and countries of the Bay of Bengal, more specifically, Myanmar and Indonesia. For each of the cases, a year different than 2012 was used to assess poverty rate.
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot() +
+  geom_polygon(data = pov.map.flag, aes(x = long, y = lat, group = group, fill = cregion)) +
+  labs(title = 'Countries and Regions') +
+  theme(text = element_text(family = "Gill Sans", color = "#FFFFFF")
+        ,panel.background = element_rect(fill = "#444444")
+        ,plot.background = element_rect(fill = "#444444")
+        ,panel.grid = element_blank()
+        ,plot.title = element_text(size = 14)
+        ,axis.text = element_blank()
+        ,axis.title = element_blank()
+        ,axis.ticks = element_blank()
+        ,legend.position = "bottom"
+  )
+```
 
-The data for the poverty rates were extracted from the PovcalNet platform of the World Bank.
+For some countries, data were scarce. It was mostly true in some of the countries of the Caspian Sea, such as Azerbaijan and Turkmenistan; countries in the African continent such as Gabon and Sudan; and countries of the Bay of Bengal, more specifically, Myanmar and Indonesia. For each of the cases, a year different than 2012 was used to assess poverty rate.
 
-The aid data was taken from the QOG data set and mirror the value of aid as a sum of the aid from diverse donors and the aid from international organizations. To allow the correct effect between economic growth, GDP size and poverty rate on the volume of aid received by a country, the data extracted from QOG is of one year after the data extracted from the PovcalNet platform and from the World Bank main dataset.
+The aid data was taken from the QOG data set and mirror the value of aid as a sum of the aid from diverse donors and the aid from international organizations. To allow the correct effect between economic growth, GDP size and poverty rate on the volume of aid received by a country, the data extracted from QOG is of one year after the data extracted from the PovcalNet platform and from the World Bank main dataset. That is to say, 
 
 Wrap-up 
 
-#**5. AN INTERESTING OUTCOME OR MORE LIKE WE KNEW IT BEFORE?**#
+**5. AN INTERESTING OUTCOME OR MORE LIKE WE KNEW IT BEFORE?**
 
 Data analysis
 
-COMMENT: Plot graphs to argue that according to the data, the size of GDP is more striking to the amount of aid a country might receive in a given year than is the poverty rate. In fact, a higher poverty rate tends to reduce the average amount of aid received.
+During the exploratory data analysis, a quick look at the distribution of international aid within the regions for the data herein used might surprise the reader. Image 1 in the appendixes shows that if we exclude the outlier countries in the Nile and Amazon Basin and in the Caspian Sea, the Bay of Bengal appears as the region that received most aid. However, after calculating the amount of aid _per capta_, we get a rather intriguing conclusion: with some eceptions, the distribution of aid _per capta_ seemed to range between 50 and 100 US dollars for most countries, but the median aid _per capta_ of the Bay of Bengal fell below the 25 US dollar mark.
 
-#**6. CONCLUDING THOUGHTS**#
+Poverty rates proved to be higher in all three regions of the African continent. Two Caspian Sea countries, however, namely, Turkmenistan and Uzbekistan presented more than 40% of poverty rates. The same is true for Myanmar, who presented a poverty rate of 42.15%.
+
+With only this information in hands, we can start inferring if poverty rates actually have influence on the amount of money disbursed by international aid to the donors here presented. Excluding outliers, the amount of money from international aid going into the Nile Basin countries is higher than that of the other African regions and of the Caspain Sea and Amazon Basin. _Per capta_ measurement levels the amount of aid available for each person in the countries, but the African regions with higher median poverty rates are just the other two: the Niger Basin and the Congo Basin. 
+
+All graphs with median income showd little to no correlation between median income and the size of aid, logged or not.
+
+GDP size however, showed a strong correlation withe the size of international aid received by the countries. As the graphs below show, when the total amount of aid was compared with the GDP of the countries, the pattern shown is that the stronger the economy of a country, more international aid it will receive. When the values are logged, this relation seems to get sharper 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = pov.aid, mapping = aes(x = log(gdp_size), y = log(aid_total))) + 
+  geom_point(mapping = aes(color = cregion)) +
+  labs(title = "Relation between GDP and Aid - both logged")
+```
+
+The GDP growth rate in the year before the aid is disbursed seems to be relevant to the decision of how much money will be given to a specific country as the graph Relation between Total Aid and GDP growth shows. The bulk of data, however, is concentrated in the middle where correlation seems to be less clear. Despite that, only one country with GDP growth below the 2% mark received a higher amount of total aid (WHO WAS THAT?). Meanwwhile, if we exclude the COUNTRy, all countries with GDP growth higher than 6% also received more aid total. Except for Bay of Bengal's XXXX.
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = pov.aid, mapping = aes(x = gdp_growth, y = log(aid_total))) + 
+  geom_point(mapping = aes(color = cregion)) +
+  geom_smooth(mapping = aes(x = gdp_growth, y= log(aid_total))) +
+  labs(title = "Relation between Total Aid and GDP Growth") +
+  xlab(label = "GDP GROWTH") +
+  ylab(label = "TOTAL AID - logged")
+```
+
+THE HIGHER GDP SIZE(logged), THE HIGHER AID TOTAL LOGGED. THE RELATIONSHIP IS LESS CLEAR IN the congo and niger basin and partially clear in the caspian sea.. for the other three groups the pattern is more evident, with one country in the Amazon region falling significantly off the curve.
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = pov.aid) + 
+  geom_point(mapping = aes(x = log(gdp_size), y = log(aid_total))) + 
+  facet_wrap(~ cregion, nrow = 2) +
+  labs(title = "Relationship between GDP size and Total Aid within regions")
+```
+
+A similar plot for poverty rate will prove less conclusive. After applying log to total aid amount and plotting it to the data on poverty rate, both the Amazon basin countries and the Nile basin countries showed a rather negative trend, meaning the higher the poverty rate, the less total aid will be given. The data for the Congo Basin region, on the other hand, inverts this trend and not much can be said about the other regions, as it can be seen on graph XXX. If the poverty rate data is put in relation with the proportion of poor people, even the Congo Basin and before less conclusive Caspian Sea and Bay of Bengal regions show a rather negative trend between poverty rate and aid.
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = pov.aid) + 
+  geom_point(mapping = aes(x = pov_rate, y = log(aid_total))) + 
+  facet_wrap(~ cregion, nrow = 2) +
+  labs(title = "Relationship between Poverty Rate and Total Aid within regions")
+```
+
+ADD SOMEWHERE ONLY COUNTRIES WITH LOW GDP SIZE RECEIVED HIGH AID PER CAPTA
+
+Most of the exploratory data analysis sugested that GDP size was more important to the size of aid disbursed to a country than poverty rates. Therefore, we ran a simple linear regression model, to both GDP size and poverty rates. In the first case, both variables were transformed into log. In the second case, the total amount of aid was turned into log. GDP size proved to be statistically significant to the data showing a positive influence over total aid. Poverty rates in total, while not as statistically significant, presented a slightly negative impact on total aid. Poverty rate model has a very low multiple R-squared, meaning it also explains very little of the amount of aid, while GDP size explains some 47% of the values predicted by the model to total aid.
+
+
+POVERTY IS STILL THE MAIN FOCUS OF THE PAPER
+
+
+
+
+
+**6. CONCLUDING THOUGHTS**
 
 Add concluding thoughts here
 
+\newpage
+
 #**7. BIBLIOGRAPHY**#
 
-Add bibliography here (or in another source)
+DEHOVE, M. Elementos sobre a gênese das organizações internacionais. In: THÉRET, B.; BRAGA, J. C. S. _Regulação econômica e globalização_. Campinas: Unicamp, 1998. p. 121-185.
+
+LANCASTER, C. _Foreign aid_: diplomacy, development, domestic politics. London: The University of Chicago Press, 2007.
+
+MORGENTHAU, H. A political theroy of foreign aid. In: _The American Political Science Review_. Vol. 56, no. 2, 1962. p. 301;309.
+
+MURPHY, C. _Organização internacional e mudança industrial_: governança global desde 1850. São Paulo: Editora UNESP, 2004.
+
+RIDDELL, R. C. _Does foreign aid really work?_. Oxford: Oxford University Press, 2007.
+
+RIST, G. _El desarollo: história de uma creencia occidental_. Madrid: Cataratas, 2002.
+
+SANTANA, V. S. A cooperação europeia para a redução da pobreza: o programa de estado para a redução da pobreza e para o desenvolvimento sustentável do Azerbaijão para o período de 2008 a 2015 e suas nuances históricas. In: _Revista Diplomatize_. Vol 5, no. 3, 2017. p. 219-233.
+
+TAVARES, M. C.; BELLUZZO, L. G. A mundialização do capital e a expansão do poder americano. In: BELLUZZO, L. G. _O poder americano_. Petrópolis: Editora Vozes, 2004, p. 111-138.
+
+WALLERSTEIN, I. _Impensar a Ciência Social_: os limites dos paradigmas do século XIX. São Paulo: Ideias&Letras, 2006.
+
+#**APPENDIXES**
+
+Image #
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = pov.aid, mapping = aes(x = cregion, y = aid_total)) +
+  geom_boxplot() + coord_flip() +
+  labs(title = "Distribution of Total Aid")
+
+ggplot(data = pov.aid, mapping = aes(x = cregion, y = aid_capta)) +
+  geom_boxplot() + coord_flip() +
+  labs(title = "Distribution of International Aid per Capta")
+```
+
+Image # Distribution of Poverty Rates within Regions
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = pov.aid, mapping = aes(x = cregion, y = pov_rate)) +
+  geom_boxplot() + coord_flip() +
+  labs(title = "Distribution of Poverty Rates within Regions")
+```
+
