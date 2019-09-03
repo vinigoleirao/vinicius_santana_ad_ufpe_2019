@@ -513,6 +513,14 @@ plot(pov.aid$cregion, pov.aid$aid_total)
 aid.regionreg1 <- lm(data = pov.aid, aid_total ~ cregion)
 summary(aid.regionreg1)
 
+# with log
+aid.regionreg1log <- lm(data = pov.aid, log(aid_total) ~ cregion)
+summary(aid.regionreg1log)
+
+#aidcapta
+aidcaptaregion <- lm(data = pov.aid, aid_capta ~ cregion)
+summary(aidcaptaregion) # NOT USE; NOT IMPORTANT
+
 # IN RELATION TO THE AMAZON BASIN, ONLY  THE BAY OF BENGAL HAS A SLIGHT STATISTICAL SIGNIFICANCE
 # SHOWING IT PLAYS A ROLE IN INCREASING THE VALUE OF AID.
 
@@ -526,3 +534,69 @@ summary(inverse.pov.aid.reg)
 
 # AGAIN GDP SHOWS TO BE MORE SIGNIFICANT THAN POVERTY RATE
 
+#BACK TO FULL MODEL TO BE ANALYSED
+
+plot(log(pov.aid$pop_total), log(pov.aid$aid_total))
+cor(log(pov.aid$pop_total), log(pov.aid$aid_total), method = "pearson") #.79 high correlation
+cor(log(pov.aid$pop_total), log(pov.aid$gdp_size), method = "pearson") #.82 high correlation
+# i will therefore take pop_total out of the model,let us check for pop_poor
+plot(log(pov.aid$pop_poor), log(pov.aid$aid_total))
+cor(log(pov.aid$pop_poor), log(pov.aid$aid_total), method = "pearson") #less correlated .43
+cor(log(pov.aid$pop_poor), log(pov.aid$gdp_size), method = "pearson") #even less .19, include pop poor
+
+########################################################################################
+#FULL MODELS
+
+###### MODEL ONE POVERTY RATE BEING CONTROLLED BY THE REST
+
+fullmodel1 <- lm(data = pov.aid, log(aid_total) ~ pov_rate + log(gdp_size) + gdp_growth + median_inc + log(pop_poor) + cregion)
+summary(fullmodel1)                 
+# it explains 69% of the statistics (59 if R squared are adjusted).. controlled by the others,
+# pov_rate presents to have a slightly negative impact on the total amount of aid received.
+# this can be interpreted like this: since the poverty rate depends on the poverty rates of the
+# previous years, then donor countries and organizations might interpret it as the aid is not
+# being effectively used, and therefore, high rates of poverty, despite denouncing the need for
+# aid will have a negative effect, although marginal on total aid. GDP size, however, not only
+# is statistically significant to total aid, but represents a fair increase in total aid.
+
+# checking if the model fits
+plot(fullmodel1)
+# graph 1 shows the residuals vs fitted, it can be seen that the model confirms the homoskedacist
+# need as the residual values are reasonably distributed around zero and with similar amplitude.
+# graph two shows that most of the data are not far away from the diagonal line, except for the
+# two extreme values. the sclae location show the standardized residuals within the fitted values
+#of the model. The last graph shows the Cook's distance, that does show most data fit well in the
+# model, and there is one piece that gets closer to being an outlier
+
+shapiro.test(fullmodel1$residuals) # this shows the residuals have normal distribution as its
+# p value is higher than 0.05
+
+plot(density(resid(fullmodel1))) # plot de densidade dos residuos, ok
+qqnorm(resid(fullmodel1))
+qqline(resid(fullmodel1))   # this is the same as with plot(lm)
+
+library(sjPlot)
+plot_model(fullmodel1, type = "pred", terms = c("pov_rate")) # PREDICTED VALUES OF TOTAL AID poverty
+plot_model(fullmodel1, type = "pred", terms = c("gdp_size [exp]")) # PREDICTED VALUES OF TOTAL AID gdp size
+plot_model(fullmodel1, type = "pred", terms = c("pop_poor"))
+plot_model(fullmodel1, type = "pred", terms = c("pov_rate", "gdp_size"))
+plot_model(fullmodel1, type = "pred", terms = c("gdp_size [exp]", "pov_rate"))
+plot_model(fullmodel1, type = "pred", terms = c("pov_rate", "cregion"))
+
+# creating the magnitude of coeficients graph
+par(mfrow=c(1,1))
+betas <- coefficients(fullmodel1)
+IC <- confint(fullmodel1, level=0.95)
+y.axis <- seq(from=1, to=length(betas))
+plot(betas, y.axis, type="p", pch=19, xlab="Magnitude of Coeficients",
+     ylab="", axes=F, xlim=c(min(IC-.4), max(IC+.4)), ylim=c(min(y.axis-.2),
+                                                             max(y.axis+.2)), cex=1,yaxs="i",xaxs="i")
+segments(IC[,1], y.axis, IC[,2], y.axis)
+axis(1, at=seq(round(min(IC-.9)), round(max(IC+.9)), by=0.1),
+     labels=seq(round(min(IC-.9)), round(max(IC+.9)), by=0.1), tick=T,
+     cex.axis=1, mgp=c(2,.7,0))
+axis(2, at=y.axis, label=names(betas), las=1, tick=T, line=-.5,
+     cex.axis=1, mgp=c(2,.7,0))
+abline(v=0, lty=2, col="red")
+
+       
